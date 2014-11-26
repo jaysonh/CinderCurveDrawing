@@ -95,7 +95,12 @@ void DrawingToolkitApp::keyDown(KeyEvent event)
 void DrawingToolkitApp::update()
 {
     if(lastScreenDimenions.x != getWindowSize().x || lastScreenDimenions.y != getWindowSize().y)
+	{ 
+
         drawingToolKit.setSize(getWindowSize().x,getWindowSize().y);
+
+		lastScreenDimenions = getWindowSize();
+	}
     drawingToolKit.update();
 	
 
@@ -105,7 +110,7 @@ void DrawingToolkitApp::update()
 void DrawingToolkitApp::draw()
 {
 
-	gl::clear(Color(0.5, 0.5, 0.5));
+	gl::clear(Color(0.0, 0.0, 0.0));
     
     drawingToolKit.draw();
     

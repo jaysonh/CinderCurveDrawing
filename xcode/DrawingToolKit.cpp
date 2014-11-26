@@ -19,7 +19,7 @@ DrawingToolKit::DrawingToolKit()
 void DrawingToolKit::init(int width, int height)
 {
     gl::Fbo::Format format;
-    //format.setSamples(8);
+    format.setSamples(8);
     
     _fbo = gl::Fbo(width, height, format);
     
